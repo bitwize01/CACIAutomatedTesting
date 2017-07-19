@@ -39,7 +39,7 @@ namespace NUnitExample
         }
 
         [Test]
-        [Ignore("Decide how to implement transaction management")]
+        [Ignore("Validate that this test meets requirements")]
         public void TransferWithInsufficientFundsAtomicity()
         {
             try

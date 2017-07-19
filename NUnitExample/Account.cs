@@ -18,7 +18,7 @@ namespace NUnitExample
 
         public void Withdraw(decimal amount)
         {
-            balance -= amount;
+            balance -= amount;  
         }
 
         public void TransferFunds(Account destination, decimal amount)
