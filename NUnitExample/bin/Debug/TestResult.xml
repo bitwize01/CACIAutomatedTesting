@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.7.0.0" clr-version="4.0.30319.42000" start-time="2017-07-14 20:31:43Z" end-time="2017-07-14 20:31:45Z" duration="1.901739">
+  <command-line><![CDATA["C:\Users\jamhunter\Downloads\Innovation\Automated Testing\nunit-console\nunit3-console.exe"  "C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\NUnitExample.csproj"]]></command-line>
+  <test-suite type="Assembly" id="1-1004" name="C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\bin\Debug\NUnitExample.exe" fullname="C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\bin\Debug\NUnitExample.exe" runstate="Runnable" testcasecount="3" result="Passed" duration="0.311802" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="_PID" value="22824" />
+      <property name="_APPDOMAIN" value="domain-a7ba0aed-NUnitExample.csproj" />
+    </properties>
+    <test-suite type="Namespace" id="1-1005" name="NUnitExample" fullname="NUnitExample" runstate="Runnable" testcasecount="3" result="Passed" duration="0.303575" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestFixture" id="1-1000" name="AccountTest" fullname="NUnitExample.AccountTest" classname="NUnitExample.AccountTest" runstate="Runnable" testcasecount="3" result="Passed" duration="0.302465" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-case id="1-1001" name="TransferFunds" fullname="NUnitExample.AccountTest.TransferFunds" methodname="TransferFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Passed" duration="0.071948" asserts="2" />
+        <test-case id="1-1002" name="TransferWithInsufficientFunds" fullname="NUnitExample.AccountTest.TransferWithInsufficientFunds" methodname="TransferWithInsufficientFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Passed" duration="0.009518" asserts="1" />
+        <test-case id="1-1003" name="TransferWithInsufficientFundsAtomicity" fullname="NUnitExample.AccountTest.TransferWithInsufficientFundsAtomicity" methodname="TransferWithInsufficientFundsAtomicity" classname="NUnitExample.AccountTest" runstate="Ignored" result="Skipped" label="Ignored" duration="0.000482" asserts="0">
+          <properties>
+            <property name="_IGNOREREASON" value="Decide how to implement transaction management" />
+          </properties>
+          <reason>
+            <message><![CDATA[Decide how to implement transaction management]]></message>
+          </reason>
+        </test-case>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
