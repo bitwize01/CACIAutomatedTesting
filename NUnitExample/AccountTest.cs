@@ -26,6 +26,7 @@ namespace NUnitExample
         [Test]
         public void TransferFunds()
         {
+            Init();
             source.TransferFunds(destination, 100m);
 
             Assert.AreEqual(250m, destination.Balance);
@@ -35,27 +36,40 @@ namespace NUnitExample
         [Test]
         public void DepoisitNegativeFunds()
         {
+            Init();
             //This should fail: don't deposit negative amounts
             Assert.That(() => source.TransferFunds(destination, -100m), Throws.TypeOf<InvalidAmountException>());
 
             Assert.AreEqual(150m, destination.Balance);
-            Assert.AreEqual(100m, source.Balance);
+            Assert.AreEqual(200m, source.Balance);
         }
 
         [Test]
         public void DepositZeroDollarFunds()
         {
+            Init();
             //This should work, but have no impact
             source.TransferFunds(destination, 0m);
 
+            Assert.AreEqual(150m, destination.Balance);
+            Assert.AreEqual(200m, source.Balance);
+        }
+
+        [Test]
+        public void DepositAdditionalFunds()
+        {
+            Init();
+            source.Deposit(100m);
+            destination.Deposit(100m);
+
             Assert.AreEqual(250m, destination.Balance);
-            Assert.AreEqual(100m, source.Balance);
+            Assert.AreEqual(300m, source.Balance);
         }
 
         [Test]
         public void TransferWithInsufficientFunds()
         {
-            Assert.That(() => source.TransferFunds(destination, 300m), Throws.TypeOf<InsufficientFundsException>());
+            Assert.That(() => source.TransferFunds(destination, 350m), Throws.TypeOf<InsufficientFundsException>());
         }
 
         [Test]
@@ -72,7 +86,7 @@ namespace NUnitExample
             }
 
             Assert.AreEqual(200m, source.Balance);
-            Assert.AreEqual(150m, destination.Balance);
+            Assert.AreEqual(350m, destination.Balance);
         }
     }
 }
