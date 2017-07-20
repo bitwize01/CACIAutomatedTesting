@@ -33,6 +33,26 @@ namespace NUnitExample
         }
 
         [Test]
+        public void DepoisitNegativeFunds()
+        {
+            //This should fail: don't deposit negative amounts
+            Assert.That(() => source.TransferFunds(destination, -100m), Throws.TypeOf<InvalidAmountException>());
+
+            Assert.AreEqual(150m, destination.Balance);
+            Assert.AreEqual(100m, source.Balance);
+        }
+
+        [Test]
+        public void DepositZeroDollarFunds()
+        {
+            //This should work, but have no impact
+            source.TransferFunds(destination, 0m);
+
+            Assert.AreEqual(250m, destination.Balance);
+            Assert.AreEqual(100m, source.Balance);
+        }
+
+        [Test]
         public void TransferWithInsufficientFunds()
         {
             Assert.That(() => source.TransferFunds(destination, 300m), Throws.TypeOf<InsufficientFundsException>());

@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="NUnitExample.exe.manifest" size="11037">
+    <dependentAssembly dependencyType="install" codebase="NUnitExample.exe.manifest" size="11038">
       <assemblyIdentity name="NUnitExample.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dSjbTbo9tSn5jk2Gge3YdfXq4dzaW7ePHdpk4tWN1+Y=</dsig:DigestValue>
+        <dsig:DigestValue>w3PtqD7FUBbnH/yF5nWAsoPm3yVA7wdxz/jB+Um+cSU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

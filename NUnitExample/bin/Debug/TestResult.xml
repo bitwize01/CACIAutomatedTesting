@@ -1,21 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="3" result="Passed" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.7.0.0" clr-version="4.0.30319.42000" start-time="2017-07-14 20:31:43Z" end-time="2017-07-14 20:31:45Z" duration="1.901739">
+<test-run id="2" testcasecount="5" result="Failed" total="5" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.7.0.0" clr-version="4.0.30319.42000" start-time="2017-07-20 17:57:58Z" end-time="2017-07-20 17:58:00Z" duration="2.037680">
   <command-line><![CDATA["C:\Users\jamhunter\Downloads\Innovation\Automated Testing\nunit-console\nunit3-console.exe"  "C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\NUnitExample.csproj"]]></command-line>
-  <test-suite type="Assembly" id="1-1004" name="C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\bin\Debug\NUnitExample.exe" fullname="C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\bin\Debug\NUnitExample.exe" runstate="Runnable" testcasecount="3" result="Passed" duration="0.311802" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
+  <test-suite type="Assembly" id="1-1006" name="C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\bin\Debug\NUnitExample.exe" fullname="C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\bin\Debug\NUnitExample.exe" runstate="Runnable" testcasecount="5" result="Failed" duration="0.478421" total="5" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" site="Child">
     <properties>
-      <property name="_PID" value="22824" />
+      <property name="_PID" value="20852" />
       <property name="_APPDOMAIN" value="domain-a7ba0aed-NUnitExample.csproj" />
     </properties>
-    <test-suite type="Namespace" id="1-1005" name="NUnitExample" fullname="NUnitExample" runstate="Runnable" testcasecount="3" result="Passed" duration="0.303575" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
-      <test-suite type="TestFixture" id="1-1000" name="AccountTest" fullname="NUnitExample.AccountTest" classname="NUnitExample.AccountTest" runstate="Runnable" testcasecount="3" result="Passed" duration="0.302465" total="3" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
-        <test-case id="1-1001" name="TransferFunds" fullname="NUnitExample.AccountTest.TransferFunds" methodname="TransferFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Passed" duration="0.071948" asserts="2" />
-        <test-case id="1-1002" name="TransferWithInsufficientFunds" fullname="NUnitExample.AccountTest.TransferWithInsufficientFunds" methodname="TransferWithInsufficientFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Passed" duration="0.009518" asserts="1" />
-        <test-case id="1-1003" name="TransferWithInsufficientFundsAtomicity" fullname="NUnitExample.AccountTest.TransferWithInsufficientFundsAtomicity" methodname="TransferWithInsufficientFundsAtomicity" classname="NUnitExample.AccountTest" runstate="Ignored" result="Skipped" label="Ignored" duration="0.000482" asserts="0">
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Namespace" id="1-1007" name="NUnitExample" fullname="NUnitExample" runstate="Runnable" testcasecount="5" result="Failed" duration="0.471702" total="5" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" site="Child">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="1-1000" name="AccountTest" fullname="NUnitExample.AccountTest" classname="NUnitExample.AccountTest" runstate="Runnable" testcasecount="5" result="Failed" duration="0.470999" total="5" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-case id="1-1002" name="DepoisitNegativeFunds" fullname="NUnitExample.AccountTest.DepoisitNegativeFunds" methodname="DepoisitNegativeFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Failed" duration="0.093714" asserts="3">
+          <failure>
+            <message><![CDATA[  Expected: 100m
+  But was:  200m
+]]></message>
+            <stack-trace><![CDATA[   at NUnit.Framework.Assert.That(Object actual, IResolveConstraint expression, String message, Object[] args)
+   at NUnit.Framework.Assert.AreEqual(Decimal expected, Decimal actual)
+   at NUnitExample.AccountTest.DepoisitNegativeFunds() in C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\AccountTest.cs:line 42]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1-1003" name="DepositZeroDollarFunds" fullname="NUnitExample.AccountTest.DepositZeroDollarFunds" methodname="DepositZeroDollarFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Failed" duration="0.008936" asserts="1">
+          <failure>
+            <message><![CDATA[  Expected: 250m
+  But was:  150m
+]]></message>
+            <stack-trace><![CDATA[   at NUnit.Framework.Assert.That(Object actual, IResolveConstraint expression, String message, Object[] args)
+   at NUnit.Framework.Assert.AreEqual(Decimal expected, Decimal actual)
+   at NUnitExample.AccountTest.DepositZeroDollarFunds() in C:\Users\jamhunter\Documents\Visual Studio 2015\Projects\NUnitExample\NUnitExample\AccountTest.cs:line 51]]></stack-trace>
+          </failure>
+        </test-case>
+        <test-case id="1-1001" name="TransferFunds" fullname="NUnitExample.AccountTest.TransferFunds" methodname="TransferFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Passed" duration="0.000369" asserts="2" />
+        <test-case id="1-1004" name="TransferWithInsufficientFunds" fullname="NUnitExample.AccountTest.TransferWithInsufficientFunds" methodname="TransferWithInsufficientFunds" classname="NUnitExample.AccountTest" runstate="Runnable" result="Passed" duration="0.000491" asserts="1" />
+        <test-case id="1-1005" name="TransferWithInsufficientFundsAtomicity" fullname="NUnitExample.AccountTest.TransferWithInsufficientFundsAtomicity" methodname="TransferWithInsufficientFundsAtomicity" classname="NUnitExample.AccountTest" runstate="Ignored" result="Skipped" label="Ignored" duration="0.000348" asserts="0">
           <properties>
-            <property name="_IGNOREREASON" value="Decide how to implement transaction management" />
+            <property name="_IGNOREREASON" value="Validate that this test meets requirements" />
           </properties>
           <reason>
-            <message><![CDATA[Decide how to implement transaction management]]></message>
+            <message><![CDATA[Validate that this test meets requirements]]></message>
           </reason>
         </test-case>
       </test-suite>

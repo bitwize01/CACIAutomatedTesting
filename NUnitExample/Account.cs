@@ -18,11 +18,13 @@ namespace NUnitExample
 
         public void Withdraw(decimal amount)
         {
-            balance -= amount;  
+            balance -= amount;
         }
 
         public void TransferFunds(Account destination, decimal amount)
         {
+            if (amount < 0)
+                throw new InvalidAmountException();
             if (balance - amount < minimumBalance)
                 throw new InsufficientFundsException();
 
@@ -43,6 +45,10 @@ namespace NUnitExample
     }
 
     public class InsufficientFundsException : ApplicationException
+    {
+    }
+
+    public class InvalidAmountException : ApplicationException
     {
     }
 }

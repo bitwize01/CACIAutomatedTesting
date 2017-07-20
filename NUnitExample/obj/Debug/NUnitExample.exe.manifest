@@ -170,14 +170,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NUnitExample.exe" size="9680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NUnitExample.exe" size="10192">
       <assemblyIdentity name="NUnitExample" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yXWYvv50ILxMYvpXG93HI6LZgtP5pSmn9ZiY35UK4Ik=</dsig:DigestValue>
+        <dsig:DigestValue>7uBf2IU/HqC02+YDtJWz8tSP2EMF03KKqGL11WRKaTk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
